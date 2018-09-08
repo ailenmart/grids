@@ -1,0 +1,41 @@
+html,body{
+	margin: 0; 
+}
+
+.container{
+	display: grid;
+	grid-template-columns: [col1] 25% [col2] 25% [col3] 25% [col4] 25%;
+	grid-template-rows: [fila1] 50px [fila2] 50px [fila3] 50px;
+	grid-template-areas: "header1 header1 header2 header2"
+			 				"main1 main2 main2 main2"
+			 				"footer footer footer footer";
+	grid-column-gap: 15px;
+	grid-row-gap: 15px;	 				
+}
+
+.item1{
+	grid-area: header1;
+	background: red;
+}
+.item2{
+	grid-area: header2;
+	background: green;
+}
+.item3{
+	grid-area: main1;
+	background: yellow;
+}
+.item4{
+	grid-area: main2;
+	background: orange;
+}
+.item5{
+	grid-area: footer;
+	background: blue;
+}
+div[class^="item"]{
+	font-family: questrial;
+	font-size: 30px;
+	color: #ffff;
+	padding: 10px;
+}
